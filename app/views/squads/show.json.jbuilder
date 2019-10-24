@@ -1,1 +1,1 @@
-json.squad @serialized_squad
+@serialized_squad
