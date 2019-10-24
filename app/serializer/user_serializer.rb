@@ -22,7 +22,7 @@ class UserSerializer
 
     def leader_info(leader)
       {
-        id: leader,
+        id: leader.id,
         first_name: leader.first_name,
         last_name: leader.last_name,
       }
