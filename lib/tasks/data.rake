@@ -73,7 +73,7 @@ namespace :data do
     retail = Squad.create!(name: 'RETAIL', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img924/3609/IQ3fQI.png')
     scotty = User.create!(first_name: 'Scott', last_name: 'Bernal', email: 'sbernal@theappraisallane.com',
                           position: 5, current_squad: retail, chapter: product,
-                          picture_url: 'https://imagizer.imageshack.com/img922/1979/IIEKV9.png', flag_url:usa)
+                          picture_url: 'https://imagizer.imageshack.com/img922/1979/IIEKV9.png', flag_url: usa)
     mati_t = User.create!(first_name: 'Matias', last_name: 'Tuduri', email: 'mtuduri@theappraisallane.com',
                           position: 4, current_squad: retail, chapter: frontend, slack_id: 'U8A11NPMJ', slack_name: 'Matias',
                           picture_url: 'https://imagizer.imageshack.com/img924/8480/x8WRF5.png')
@@ -120,7 +120,7 @@ namespace :data do
                  chapter: backend, slack_id: 'DCZSLLQDU', slack_name: 'Chocho')
     User.create!(first_name: 'Gianfranco', last_name: 'Zabarino', email: 'gfzabarino@theappraisallane.com',
                  position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img921/4633/4IOAAG.png',
-                 chapter: backend, slack_id: 'DD3LLEP1C', slack_name: 'gianny')
+                 chapter: backend, slack_id: 'DD3LLEP1C', slack_name: 'gianny', flag_url: argentina)
     User.create!(first_name: 'Rodrigo', last_name: 'Vazquez', email: 'rvazquez@theappraisallane.com',
                  position: 0, current_squad: core,
                  chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/3120/IMu7c6.png',
