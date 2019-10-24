@@ -5,6 +5,7 @@ class FeedbackSerializer
         id: feedback.id,
         sender: UserSerializer.show(feedback.sender),
         receiver: UserSerializer.show(feedback.receiver),
+        text: feedback.text,
         rating: feedback.rating,
         category: feedback.category,
         created_at: date_transform(feedback.created_at),
