@@ -1,5 +1,5 @@
 class FeedbacksController < ApplicationController
-  before_action :set_user, only: [:create, :feedback_given, :feedback_received]
+  before_action :set_user, only: [:feedback_given, :feedback_received]
 
   def create
     feedback = Feedback.create!(create_params)
