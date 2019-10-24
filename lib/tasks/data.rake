@@ -68,6 +68,7 @@ namespace :data do
                      sender_id: mati_t.id, receiver_id: german.id, rating: 4, category: 2
     Feedback.create! text: 'Very unprofessional employee. Very low work quantity and quality. Not dependable.',
                      sender_id: mati_t.id, receiver_id: german.id, rating: 1, category: 3
+    puts 'Finished creating feedbacks'
 
   end
 end
