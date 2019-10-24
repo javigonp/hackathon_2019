@@ -9,6 +9,7 @@ namespace :data do
     bulgaria = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-bulgaria_1f1e7-1f1ec.png'
     germany = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-germany_1f1e9-1f1ea.png'
     usa = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-united-states_1f1fa-1f1f8.png'
+    belarus = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-belarus_1f1e7-1f1fe.png'
 
     ### Areas ###
     Area.create(name: 'IT', picture: 'TODO')
@@ -59,10 +60,10 @@ namespace :data do
                  slack_id: 'DGN3P0CM7', slack_name: 'Gonzalo')
     User.create!(first_name: 'Denis', last_name: 'Trubenkov', email: 'dtrubenkov@theappraisallane.com',
                  position: 3, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img921/6001/N38GGB.png',
-                 chapter: ios, slack_id: 'DPDASEKU2', slack_name: 'Den')
+                 chapter: ios, slack_id: 'DPDASEKU2', slack_name: 'Den', flag_url: belarus)
     User.create!(first_name: 'Todor', last_name: 'Todorin', email: 'ttodorin@theappraisallane.com',
                  position: 4, current_squad: core, chapter: frontend, slack_id: 'DL2PSU62Z', slack_name: 'Toti',
-                 picture_url: 'https://imagizer.imageshack.com/img923/4371/uHm2EW.png')
+                 picture_url: 'https://imagizer.imageshack.com/img923/4371/uHm2EW.png', flag_url: bulgaria)
     core.update!(product_owner: reed, scrum_master: javi)
     puts 'Finished creating core data'
 
