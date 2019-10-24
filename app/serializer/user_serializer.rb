@@ -9,10 +9,11 @@ class UserSerializer
         email: user.email,
         position: user.position,
         picture_url: user.picture_url,
-        leader: leader_info(user.leader),
+        leader: leader_info(user.lead),
         squad: squad(user.current_squad),
-        chapter: chapter(user.chapter)
-
+        chapter: chapter(user.chapter),
+        slack_id: user.slack_id,
+        slack_name: user.slack_name
       }
     end
 
