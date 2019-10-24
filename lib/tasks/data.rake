@@ -3,6 +3,13 @@ namespace :data do
   task dataset: :environment do
     [Feedback, UserSquadHistoryEntry, Squad, User, Area].each { |klass| klass.delete_all }
 
+    ### Flags ###
+    uruguay = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-uruguay_1f1fa-1f1fe.png'
+    argentina = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-argentina_1f1e6-1f1f7.png'
+    bulgaria = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-bulgaria_1f1e7-1f1ec.png'
+    germany = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-germany_1f1e9-1f1ea.png'
+    usa = 'https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/google/223/flag-for-united-states_1f1fa-1f1f8.png'
+
     ### Areas ###
     Area.create(name: 'IT', picture: 'TODO')
     Area.create(name: 'Sales', picture: 'TODO')
@@ -31,7 +38,7 @@ namespace :data do
                          chapter: ios, slack_id: 'DCMHF9XD1', slack_name: 'Mathias')
     ios.update(chapter_lead: mathi)
     android.update(chapter_lead: marcher)
-    reed = User.create!(first_name: 'Reed', last_name: 'Wilson', email: 'rwilson@theappraisallane.com', position: 5, current_squad: core, chapter: product)
+    reed = User.create!(first_name: 'Reed', last_name: 'Wilson', email: 'rwilson@theappraisallane.com', position: 5, current_squad: core, chapter: product, flag_url: usa)
     javi = User.create!(first_name: 'Javier', last_name: 'Gonzalez', email: 'jgonzalez@theappraisallane.com',
                         position: 1, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img923/8409/1hkuRj.png',
                         chapter: backend, slack_id: 'DCLE3NCLV', slack_name: 'Javi')
@@ -40,7 +47,7 @@ namespace :data do
 
     #### REATAIL ####
     retail = Squad.create!(name: 'RETAIL', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img924/3609/IQ3fQI.png')
-    scotty = User.create!(first_name: 'Scott', last_name: 'Bernal', email: 'sbernal@theappraisallane.com', position: 5, current_squad: retail, chapter: product)
+    scotty = User.create!(first_name: 'Scott', last_name: 'Bernal', email: 'sbernal@theappraisallane.com', position: 5, current_squad: retail, chapter: product, flag_url: usa)
     mati_t = User.create!(first_name: 'Matias', last_name: 'Tuduri', email: 'mtuduri@theappraisallane.com',
                           position: 4, current_squad: retail, chapter: frontend, slack_id: 'U8A11NPMJ', slack_name: 'Matias',
                           picture_url: 'https://imagizer.imageshack.com/img924/8480/x8WRF5.png')
@@ -61,7 +68,7 @@ namespace :data do
 
     ### Submissions
     submissions = Squad.create!(name: 'SUBMISSIONS', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img924/7467/JhnkoM.png')
-    mike = User.create!(first_name: 'Mike', last_name: 'Latiak', email: 'mlatiak@theappraisallane.com', position: 5, current_squad: submissions, chapter: product)
+    mike = User.create!(first_name: 'Mike', last_name: 'Latiak', email: 'mlatiak@theappraisallane.com', position: 5, current_squad: submissions, chapter: product, flag_url: usa)
     mauri = User.create!(first_name: 'Mauricio', last_name: 'Vignale', email: 'mvignale@theappraisallane.com',
                           position: 2, current_squad: submissions, chapter: android,
                          picture_url: 'https://imagizer.imageshack.com/img921/2102/Oq27vR.png', slack_id: 'DCNSH8V3Q', slack_name: 'Mauri')
