@@ -1,0 +1,1 @@
+json.squad @serialized_squad
