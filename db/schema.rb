@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20191023234906) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",            null: false
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "first_name",       null: false
+    t.string   "last_name",        null: false
     t.string   "location"
     t.integer  "position"
     t.string   "slack_id"
