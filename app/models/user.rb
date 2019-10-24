@@ -12,8 +12,9 @@ class User < ApplicationRecord
 
 
   def lead
+    puts first_name
     return self.leader if self.leader.present?
-    chapter.chapter_lead
+    chapter.try(:chapter_lead)
   end
 
   def self.team_members(squad_id)
