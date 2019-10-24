@@ -1,1 +1,1 @@
-@serialized_user
+json.user @serialized_user
