@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191024170628) do
+ActiveRecord::Schema.define(version: 20191024175522) do
 
   create_table "areas", force: :cascade do |t|
     t.string   "picture"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 20191024170628) do
     t.string   "slack_handle"
     t.integer  "chapter_id",       default: 1
     t.string   "slack_name"
+    t.integer  "leader_id"
   end
 
 end
