@@ -7,7 +7,8 @@ class UserSerializer
         last_name: user.last_name,
         created_at: date_transform(user.created_at),
         email: user.email,
-        position: user.position
+        position: user.position,
+        picture_url: user.picture_url
       }
     end
 
