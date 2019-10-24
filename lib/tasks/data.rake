@@ -41,7 +41,7 @@ namespace :data do
     android.update(chapter_lead: marcher)
     reed = User.create!(first_name: 'Reed', last_name: 'Wilson', email: 'rwilson@theappraisallane.com',
                         position: 5, current_squad: core, chapter: product,
-                        picture_url: 'https://imagizer.imageshack.com/img921/7270/6iWsII.png', flat_url: usa)
+                        picture_url: 'https://imagizer.imageshack.com/img921/7270/6iWsII.png', flag_url: usa)
     javi = User.create!(first_name: 'Javier', last_name: 'Gonzalez', email: 'jgonzalez@theappraisallane.com',
                         position: 1, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img923/8409/1hkuRj.png',
                         chapter: backend, slack_id: 'DCLE3NCLV', slack_name: 'Javi')
@@ -73,7 +73,7 @@ namespace :data do
     retail = Squad.create!(name: 'RETAIL', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img924/3609/IQ3fQI.png')
     scotty = User.create!(first_name: 'Scott', last_name: 'Bernal', email: 'sbernal@theappraisallane.com',
                           position: 5, current_squad: retail, chapter: product,
-                          picture_url: 'https://imagizer.imageshack.com/img922/1979/IIEKV9.png', flat_url:usa)
+                          picture_url: 'https://imagizer.imageshack.com/img922/1979/IIEKV9.png', flag_url:usa)
     mati_t = User.create!(first_name: 'Matias', last_name: 'Tuduri', email: 'mtuduri@theappraisallane.com',
                           position: 4, current_squad: retail, chapter: frontend, slack_id: 'U8A11NPMJ', slack_name: 'Matias',
                           picture_url: 'https://imagizer.imageshack.com/img924/8480/x8WRF5.png')
