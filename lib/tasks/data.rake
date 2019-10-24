@@ -112,7 +112,7 @@ namespace :data do
                  chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/3120/IMu7c6.png',
                  slack_id: 'DCY15QSG5', slack_name: 'Rod Vaz')
     User.create!(first_name: 'Majo', last_name: 'Andrade', email: 'mandrade@theappraisallane.com',
-                 position: 0, current_squad: core,
+                 position: 0, current_squad: submissions,
                  chapter: qa, picture_url: 'https://imagizer.imageshack.com/img921/7061/RGie6E.png',
                  slack_id: 'DEE0GBB99', slack_name: 'Majo')
     qa.update(chapter_lead: diego_g)
