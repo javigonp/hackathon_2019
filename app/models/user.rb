@@ -9,6 +9,7 @@ class User < ApplicationRecord
   enum position: ['QA', 'Backend Engineer', 'Android Engineer', 'iOS Engineer', 'FE Engineer', 'Product Owner', 'DevOps', 'VP of Engineer']
 
   def leader
+    return unless chapter.present?
     chapter.chapter_lead
   end
 
