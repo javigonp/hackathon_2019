@@ -13,11 +13,13 @@ class FeedbacksController < ApplicationController
   def feedback_given
     feedbacks = @user.feedbacks_given
     @serialized_feedbacks = FeedbackSerializer.index(feedbacks)
+    render 'index'
   end
 
   def feedback_received
     feedbacks = @user.feedbacks_received
     @serialized_feedbacks = FeedbackSerializer.index(feedbacks)
+    render 'index'
   end
 
   private
