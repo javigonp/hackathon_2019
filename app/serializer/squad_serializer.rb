@@ -6,7 +6,8 @@ class SquadSerializer
         name: squad.name,
         created_at: date_transform(squad.created_at),
         product_owner: user(squad.product_owner),
-        scrum_master: user(squad.scrum_master)
+        scrum_master: user(squad.scrum_master),
+        members: members(User.team_members(squad.id))
       }
     end
 
@@ -22,6 +23,10 @@ class SquadSerializer
 
     def user(user)
       UserSerializer.show(user)
+    end
+
+    def members(users)
+      users.map { |user| UserSerializer.show(user) }
     end
   end
 end

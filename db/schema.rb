@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191024124736) do
+ActiveRecord::Schema.define(version: 20191024130352) do
 
   create_table "squads", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20191024124736) do
     t.datetime "updated_at",       null: false
     t.integer  "current_squad_id"
     t.string   "picture_url"
+    t.string   "slack_handle"
   end
 
 end
