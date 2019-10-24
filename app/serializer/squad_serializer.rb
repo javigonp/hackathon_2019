@@ -1,14 +1,14 @@
 class SquadSerializer
   class << self
     def show(squad)
-      puts squad.id
       {
         id: squad.id,
         name: squad.name,
         created_at: date_transform(squad.created_at),
         product_owner: user(squad.product_owner),
         scrum_master: user(squad.scrum_master),
-        members: members(User.team_members(squad.id))
+        members: members(User.team_members(squad.id)),
+        picture_url: squad.picture_url
       }
     end
 
