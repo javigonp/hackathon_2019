@@ -100,7 +100,7 @@ namespace :data do
     mauri = User.create!(first_name: 'Mauricio', last_name: 'Vignale', email: 'mvignale@theappraisallane.com',
                           position: 2, current_squad: submissions, chapter: android,
                          picture_url: 'https://imagizer.imageshack.com/img921/2102/Oq27vR.png', slack_id: 'DCNSH8V3Q', slack_name: 'Mauri')
-    retail.update!(product_owner: mike, scrum_master: mauri)
+    submissions.update!(product_owner: mike, scrum_master: mauri)
     kaiser = User.create!(first_name: 'Christian', last_name: 'Schmeichel', email: 'cschmeichel@theappraisallane.com',
                           position: 1, current_squad: submissions,
                           picture_url: 'https://imagizer.imageshack.com/img923/3685/6x6hDP.png',
@@ -119,7 +119,7 @@ namespace :data do
                  position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img923/1461/EkEFeR.png',
                  chapter: backend, slack_id: 'DCZSLLQDU', slack_name: 'Chocho')
     User.create!(first_name: 'Gianfranco', last_name: 'Zabarino', email: 'gfzabarino@theappraisallane.com',
-                 position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img921/4633/4IOAAG.png',
+                 position: 3, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img921/4633/4IOAAG.png',
                  chapter: backend, slack_id: 'DD3LLEP1C', slack_name: 'gianny', flag_url: argentina)
     User.create!(first_name: 'Rodrigo', last_name: 'Vazquez', email: 'rvazquez@theappraisallane.com',
                  position: 0, current_squad: core,
