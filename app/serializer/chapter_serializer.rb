@@ -5,7 +5,8 @@ class ChapterSerializer
         id: chapter.id,
         name: chapter.name,
         members: chapter_members(chapter.members_without_leader),
-        leader: UserSerializer.show(chapter.chapter_lead)
+        leader: UserSerializer.show(chapter.chapter_lead),
+        picture_url: chapter.picture_url
       }
     end
 

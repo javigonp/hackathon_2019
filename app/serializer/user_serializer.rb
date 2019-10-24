@@ -21,6 +21,7 @@ class UserSerializer
     end
 
     def leader_info(leader)
+      return unless leader.present?
       {
         id: leader.id,
         first_name: leader.first_name,
@@ -29,6 +30,7 @@ class UserSerializer
     end
 
     def chapter(chapter)
+      return unless chapter.present?
       {
         id: chapter.id,
         name: chapter.name
@@ -36,6 +38,7 @@ class UserSerializer
     end
 
     def squad(squad)
+      return unless squad.present?
       {
         id: squad.id,
         name: squad.name
