@@ -2,7 +2,7 @@ class FeedbacksController < ApplicationController
   before_action :set_user, only: [:create, :feedback_given, :feedback_received]
 
   def create
-    feedback = Feedback(create_params)
+    feedback = Feedback.create!(create_params)
     @serialized_feedback = FeedbackSerializer.show(feedback)
     render 'show'
   end
