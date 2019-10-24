@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :squads, only: %i[index show], defaults: { format: :json }
   resources :users, only: %i[index show], defaults: { format: :json }
   resources :chapters, only: %i[index show], defaults: { format: :json }
+  resources :areas, only: %i[index], defaults: { format: :json }
 
   resources :feedbacks, onlye: %i[create show], defaults: { format: :json } do
     collection do

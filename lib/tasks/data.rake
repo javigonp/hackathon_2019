@@ -1,7 +1,14 @@
 namespace :data do
   desc "Create an initial dataset"
   task dataset: :environment do
-    [UserSquadHistoryEntry, Squad, User, Feedback].each { |klass| klass.delete_all }
+    [Feedback, UserSquadHistoryEntry, Squad, User, Area].each { |klass| klass.delete_all }
+
+    ### Areas ###
+    Area.create(name: 'IT', picture: 'TODO')
+    Area.create(name: 'Sales', picture: 'TODO')
+    Area.create(name: 'Marketing', picture: 'TODO')
+    Area.create(name: 'Operations', picture: 'TODO')
+    Area.create(name: 'Board', picture: 'TODO')
 
     ### Chapters ###
     android = Chapter.create(name: 'Android', picture_url: 'https://imagizer.imageshack.com/img922/2830/s6KF7O.png')
