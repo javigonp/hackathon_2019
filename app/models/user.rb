@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :squads
   has_many :feedbacks_given, class_name: Feedback, foreign_key: :sender_id
   has_many :feedbacks_received, class_name: Feedback, foreign_key: :receiver_id
+  has_many :user_squad_history_entries, class_name: UserSquadHistoryEntry, foreign_key: :user_id
 
   enum position: ['QA', 'Backend Engineer', 'Android Engineer', 'iOS Engineer', 'FE Engineer', 'Product Owner', 'DevOps', 'VP of Engineer']
 

@@ -87,14 +87,18 @@ namespace :data do
 
     ############# FEEDBACK #############
     Feedback.create! text: 'Very good quality of work. The work has a lot of quality. Never seen this kind of quality of work before.',
-                     sender_id: mati_t.id, receiver_id: german.id, rating: 5, category: 0
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 4, category: 0
     Feedback.create! text: 'Incredible quantity of work. Never seen this amount of work quantity in my whole life.',
-                     sender_id: mati_t.id, receiver_id: german.id, rating: 5, category: 1
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 4, category: 1
     Feedback.create! text: "Very reliable worker. He's always around, so you can aways rely on him.",
-                     sender_id: mati_t.id, receiver_id: german.id, rating: 4, category: 2
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 3, category: 2
     Feedback.create! text: 'Very unprofessional employee. Very low work quantity and quality. Not dependable.',
                      sender_id: mati_t.id, receiver_id: german.id, rating: 1, category: 3
     puts 'Finished creating feedbacks'
 
+    ############# SQUAD HISTORY #############
+    UserSquadHistoryEntry.create(user: kaiser, squad: core, date_from: DateTime.new(2018, 8, 1), date_to: DateTime.new(2019, 12, 31))
+    UserSquadHistoryEntry.create(user: kaiser, squad: retail, date_from: DateTime.new(2019, 1, 1), date_to: DateTime.new(2019, 6, 1))
+    UserSquadHistoryEntry.create(user: kaiser, squad: submissions, date_from: DateTime.new(2019, 6, 2), date_to: nil)
   end
 end

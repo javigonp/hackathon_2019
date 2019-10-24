@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20191024160743) do
   create_table "user_squad_history", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "squad_id",   null: false
-    t.datetime "date_from",  null: false
-    t.datetime "date_to",    null: false
+    t.datetime "date_from"
+    t.datetime "date_to"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

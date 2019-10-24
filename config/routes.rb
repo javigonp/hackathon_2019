@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :squads, only: %i[index show], defaults: { format: :json }
-  resources :users, only: %i[index show], defaults: { format: :json }
+  resources :users, only: %i[index show], defaults: { format: :json } do
+    member do
+      get '/squad_history' => 'users#squad_history'
+    end
+  end
   resources :chapters, only: %i[index show], defaults: { format: :json }
   resources :areas, only: %i[index], defaults: { format: :json }
 

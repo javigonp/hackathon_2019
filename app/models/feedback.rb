@@ -4,5 +4,5 @@ class Feedback < ApplicationRecord
 
   enum category: ['Quality of Work', 'Quantity of Work', 'Dependability', 'Professionalism']
 
-  validates :rating, inclusion: { in: [1, 2, 3, 4, 5] }
+  validates :rating, inclusion: { in: [1, 2, 3, 4] }
 end
