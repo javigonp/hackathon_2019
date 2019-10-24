@@ -1,0 +1,1 @@
+json.squad_history @serialized_squad_history

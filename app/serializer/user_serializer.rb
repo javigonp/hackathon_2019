@@ -13,7 +13,8 @@ class UserSerializer
         squad: squad(user.current_squad),
         chapter: chapter(user.chapter),
         slack_id: user.slack_id,
-        slack_name: user.slack_name
+        slack_name: user.slack_name,
+        flag_url: user.flag_url
       }
     end
 
