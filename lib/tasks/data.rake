@@ -79,7 +79,8 @@ namespace :data do
                           picture_url: 'https://imagizer.imageshack.com/img924/8480/x8WRF5.png')
 
     german = User.create!(first_name: 'German', last_name: 'Quinteros', email: 'gquinteros@theappraisallane.com',
-                          position: 4, current_squad: retail, chapter: frontend, slack_id: 'DLSB21UUT', slack_name: 'German Quinteros')
+                          position: 4, current_squad: retail, chapter: frontend, slack_id: 'DLSB21UUT',
+                          slack_name: 'German Quinteros', picture_url: 'https://imagizer.imageshack.com/img923/7167/zUEUUV.png')
     frontend.update(chapter_lead: mati_t)
     agus = User.create!(first_name: 'Agustin', last_name: 'Taruselli', email: 'ataruselli@theappraisallane.com',
                         position: 0, picture_url: 'https://imagizer.imageshack.com/img922/3830/YLvbaP.jpg',
