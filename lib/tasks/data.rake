@@ -24,14 +24,17 @@ namespace :data do
     ### CORE ###
     core = Squad.create!(name: 'CORE', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img921/4467/8OuVI4.png')
     marcher = User.create!(first_name: 'Diego', last_name: 'Marcher', email: 'dmarcher@theappraisallane.com',
-                 position: 2, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img922/1396/X5irXf.png', chapter: android)
+                 position: 2, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img922/1396/X5irXf.png',
+                           chapter: android, slack_id: 'UCLE2RQAH', slack_name: 'Diego')
     mathi = User.create!(first_name: 'Mathias', last_name: 'Carignani', email: 'mathias@theappraisallane.com',
-                           position: 3, current_squad: core, picture_url: 'https://imageshack.com/i/pmX5irXfp', chapter: ios)
+                         position: 3, current_squad: core, picture_url: 'https://imageshack.com/i/pmX5irXfp',
+                         chapter: ios, slack_id: 'U8A3QE4A1', slack_name: 'Mathias')
     ios.update(chapter_lead: mathi)
     android.update(chapter_lead: marcher)
     reed = User.create!(first_name: 'Reed', last_name: 'Wilson', email: 'rwilson@theappraisallane.com', position: 5, current_squad: core, chapter: product)
     javi = User.create!(first_name: 'Javier', last_name: 'Gonzalez', email: 'jgonzalez@theappraisallane.com',
-                        position: 1, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img923/8409/1hkuRj.png', chapter: backend)
+                        position: 1, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img923/8409/1hkuRj.png',
+                        chapter: backend, slack_id: 'U8ASG9SAJ', slack_name: 'Javi')
     core.update!(product_owner: reed, scrum_master: javi)
     puts 'Finished creating core data'
 
@@ -39,15 +42,18 @@ namespace :data do
     retail = Squad.create!(name: 'RETAIL', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img924/3609/IQ3fQI.png')
     scotty = User.create!(first_name: 'Scott', last_name: 'Bernal', email: 'sbernal@theappraisallane.com', position: 5, current_squad: retail, chapter: product)
     mati_t = User.create!(first_name: 'Matias', last_name: 'Tuduri', email: 'mtuduri@theappraisallane.com',
-                        position: 4, current_squad: retail, chapter: frontend)
+                          position: 4, current_squad: retail, chapter: frontend, slack_id: 'U8A11NPMJ', slack_name: 'Matias',
+                          picture_url: 'https://imagizer.imageshack.com/img924/8480/x8WRF5.png')
 
     german = User.create!(first_name: 'German', last_name: 'Quinteros', email: 'gquinteros@theappraisallane.com',
-                          position: 4, current_squad: retail, chapter: frontend)
+                          position: 4, current_squad: retail, chapter: frontend, slack_id: 'UM04CRCF9', slack_name: 'German Quinteros')
     frontend.update(chapter_lead: mati_t)
     agus = User.create!(first_name: 'Agustin', last_name: 'Taruselli', email: 'ataruselli@theappraisallane.com',
-                        position: 0, picture_url: 'https://imagizer.imageshack.com/img922/3830/YLvbaP.jpg', current_squad: retail, chapter: qa)
+                        position: 0, picture_url: 'https://imagizer.imageshack.com/img922/3830/YLvbaP.jpg',
+                        current_squad: retail, chapter: qa, slack_id: 'U8B1MSFQF', slack_name: 'Agustin')
     cerve = User.create!(first_name: 'Pablo', last_name: 'Cervenansky', email: 'pablo@theappraisallane.com',
-                        position: 1, picture_url: 'https://imagizer.imageshack.com/img924/9021/IzgVRi.png', current_squad: retail, chapter: backend)
+                        position: 1, picture_url: 'https://imagizer.imageshack.com/img924/9021/IzgVRi.png',
+                         current_squad: retail, chapter: backend, slack_id: 'U89E1HABB', slack_name: 'Pablo Cerve')
 
     retail.update!(product_owner: scotty, scrum_master: mati_t)
     puts 'Finished creating retail data'
@@ -57,16 +63,20 @@ namespace :data do
     submissions = Squad.create!(name: 'SUBMISSIONS', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img924/7467/JhnkoM.png')
     mike = User.create!(first_name: 'Mike', last_name: 'Latiak', email: 'mlatiak@theappraisallane.com', position: 5, current_squad: submissions, chapter: product)
     mauri = User.create!(first_name: 'Mauricio', last_name: 'Vignale', email: 'mvignale@theappraisallane.com',
-                          position: 2, current_squad: submissions, chapter: android)
-
+                          position: 2, current_squad: submissions, chapter: android,
+                         picture_url: 'https://imagizer.imageshack.com/img921/2102/Oq27vR.png', slack_id: 'UAGFWJWGZ', slack_name: 'Mauri')
     retail.update!(product_owner: mike, scrum_master: mauri)
     kaiser = User.create!(first_name: 'Christian', last_name: 'Schmeichel', email: 'cschmeichel@theappraisallane.com',
-                        position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img923/3685/6x6hDP.png', chapter: backend)
+                          position: 1, current_squad: submissions,
+                          picture_url: 'https://imagizer.imageshack.com/img923/3685/6x6hDP.png',
+                          chapter: backend, slack_id: 'U8A4AHVRB', slack_name: 'Christian')
     submissions.update!(product_owner: mike, scrum_master: mauri)
     backend.update(chapter_lead: kaiser)
     product.update(chapter_lead: mike)
     diego_g = User.create!(first_name: 'Diego', last_name: 'Gawenda', email: 'dgawenda@theappraisallane.com',
-                          position: 0, current_squad: retail, chapter: qa)
+                           position: 0, current_squad: retail,
+                           chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/9391/kQK6wk.png',
+                           slack_id: 'U8B39NXB9', slack_name: 'Diegote')
     qa.update(chapter_lead: diego_g)
     puts 'Finished creating submissions data'
 
@@ -75,11 +85,15 @@ namespace :data do
     ## Devops ###
     devops_squad = Squad.create!(name: 'DEVOPS', product_owner_id: nil, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img921/7577/5iAjay.jpg')
     nacho = User.create!(first_name: 'Ignacio', last_name: 'Capurro', email: 'nacho@theappraisallane.com', position: 7,
-                         picture_url: 'https://imagizer.imageshack.com/img923/1923/VvnaK0.png', current_squad: nil, chapter: nil)
+                         picture_url: 'https://imagizer.imageshack.com/img923/1923/VvnaK0.png',
+                         current_squad: nil, chapter: nil, slack_id: 'U80RV1FQC', slack_name: 'nacho')
     kenny = User.create!(first_name: 'Keneth', last_name: 'Belitzky', email: 'kbelitzky@theappraisallane.com', position: 6,
-                       picture_url: 'https://imagizer.imageshack.com/img923/6201/sNIRM2.png', current_squad: devops_squad, chapter: devops)
+                         picture_url: 'https://imagizer.imageshack.com/img923/6201/sNIRM2.png',
+                         current_squad: devops_squad, chapter: devops, slack_id: 'U81QYBP55', slack_name: 'Kenny')
     cristian = User.create!(first_name: 'Cristian', last_name: 'Bermudez', email: 'cbermudez@theappraisallane.com', position: 6,
-                         picture_url: 'https://imagizer.imageshack.com/img921/4705/UuHOTe.png', current_squad: devops_squad, chapter: devops)
+                            picture_url: 'https://imagizer.imageshack.com/img921/4705/UuHOTe.png',
+                            current_squad: devops_squad, chapter: devops, slack_id: 'UGMHZ551N',
+                            slack_name: 'Cristian Bermudez')
     devops_squad.update!(product_owner: nacho, scrum_master: kenny)
     devops.update(chapter_lead: kenny)
 
