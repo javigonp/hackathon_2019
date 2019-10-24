@@ -35,6 +35,27 @@ namespace :data do
     javi = User.create!(first_name: 'Javier', last_name: 'Gonzalez', email: 'jgonzalez@theappraisallane.com',
                         position: 1, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img923/8409/1hkuRj.png',
                         chapter: backend, slack_id: 'DCLE3NCLV', slack_name: 'Javi')
+    User.create!(first_name: 'Jaime', last_name: 'Gomez', email: 'jaime.gomez@theappraisallane.com',
+                 position: 2, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img924/5448/s6qFV7.png',
+                 chapter: android, slack_id: 'DCP2R8M7V', slack_name: 'Jaime')
+    User.create!(first_name: 'Ignacio', last_name: 'Fernandez', email: 'ifernandez@theappraisallane.com',
+                 position: 0, current_squad: core,
+                 chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/7348/HX01Nh.png',
+                 slack_id: 'DDS0W68JZ', slack_name: 'NachoQa')
+    User.create!(first_name: 'Edith', last_name: 'Alvarado', email: 'ealvarado@theappraisallane.com',
+                 position: 0, current_squad: core,
+                 chapter: qa, picture_url: 'https://imagizer.imageshack.com/img924/3813/tUdKiv.png',
+                 slack_id: 'DHJ9VU4KX', slack_name: 'Edith')
+    User.create!(first_name: 'Gonzalo', last_name: 'Barrios', email: 'gbarrios@theappraisallane.com',
+                 position: 0, current_squad: core,
+                 chapter: qa, picture_url: 'https://imagizer.imageshack.com/img923/7250/zr8b74.png',
+                 slack_id: 'DGN3P0CM7', slack_name: 'Gonzalo')
+    User.create!(first_name: 'Denis', last_name: 'Trubenkov', email: 'dtrubenkov@theappraisallane.com',
+                 position: 3, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img921/6001/N38GGB.png',
+                 chapter: ios, slack_id: 'DPDASEKU2', slack_name: 'Den')
+    User.create!(first_name: 'Todor', last_name: 'Todorin', email: 'ttodorin@theappraisallane.com',
+                 position: 4, current_squad: core, chapter: frontend, slack_id: 'DL2PSU62Z', slack_name: 'Toti',
+                 picture_url: 'https://imagizer.imageshack.com/img923/4371/uHm2EW.png')
     core.update!(product_owner: reed, scrum_master: javi)
     puts 'Finished creating core data'
 
@@ -77,6 +98,23 @@ namespace :data do
                            position: 0, current_squad: nil,
                            chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/9391/kQK6wk.png',
                            slack_id: 'DCNQL51UP', slack_name: 'Diegote')
+    User.create!(first_name: 'Marcia', last_name: 'Gilardi', email: 'mgilardi@theappraisallane.com',
+                           position: 2, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img922/1396/X5irXf.png',
+                           chapter: android, slack_id: 'DM4GZ6PKQ', slack_name: 'Marcia')
+    User.create!(first_name: 'Gustavo', last_name: 'Villa', email: 'gvilla@theappraisallane.com',
+                 position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img923/1461/EkEFeR.png',
+                 chapter: backend, slack_id: 'DCZSLLQDU', slack_name: 'Chocho')
+    User.create!(first_name: 'Gianfranco', last_name: 'Zabarino', email: 'gfzabarino@theappraisallane.com',
+                 position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img921/4633/4IOAAG.png',
+                 chapter: backend, slack_id: 'DD3LLEP1C', slack_name: 'gianny')
+    User.create!(first_name: 'Rodrigo', last_name: 'Vazquez', email: 'rvazquez@theappraisallane.com',
+                 position: 0, current_squad: core,
+                 chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/3120/IMu7c6.png',
+                 slack_id: 'DCY15QSG5', slack_name: 'Rod Vaz')
+    User.create!(first_name: 'Majo', last_name: 'Andrade', email: 'mandrade@theappraisallane.com',
+                 position: 0, current_squad: core,
+                 chapter: qa, picture_url: 'https://imagizer.imageshack.com/img921/7061/RGie6E.png',
+                 slack_id: 'DEE0GBB99', slack_name: 'Majo')
     qa.update(chapter_lead: diego_g)
     puts 'Finished creating submissions data'
 
@@ -110,11 +148,21 @@ namespace :data do
     Feedback.create! text: 'Very good quality of work. The work has a lot of quality. Never seen this kind of quality of work before.',
                      sender_id: mati_t.id, receiver_id: german.id, rating: 5, category: 0
     Feedback.create! text: 'Incredible quantity of work. Never seen this amount of work quantity in my whole life.',
-                     sender_id: mati_t.id, receiver_id: german.id, rating: 5, category: 1
+                     sender_id: marcher.id, receiver_id: german.id, rating: 5, category: 1
     Feedback.create! text: "Very reliable worker. He's always around, so you can aways rely on him.",
                      sender_id: mati_t.id, receiver_id: german.id, rating: 4, category: 2
     Feedback.create! text: 'Very unprofessional employee. Very low work quantity and quality. Not dependable.',
                      sender_id: mati_t.id, receiver_id: german.id, rating: 1, category: 3
+
+    Feedback.create! text: 'Very good quality of work. The work has a lot of quality. Never seen this kind of quality of work before.',
+                     receiver_id: marcher.id, sender_id: german.id, rating: 4, category: 0
+    Feedback.create! text: 'Incredible quantity of work. Never seen this amount of work quantity in my whole life.',
+                     receiver_id: mati_t.id, sender_id: german.id, rating: 4, category: 1
+    Feedback.create! text: "Very reliable worker. He's always around, so you can aways rely on him.",
+                     receiver_id: mati_t.id, sender_id: german.id, rating: 3, category: 2
+    Feedback.create! text: 'Very unprofessional employee. Very low work quantity and quality. Not dependable.',
+                     receiver_id: mati_t.id, sender_id: german.id, rating: 1, category: 3
+
     puts 'Finished creating feedbacks'
 
   end
