@@ -3,7 +3,8 @@ class AreaSerializer
     def show(area)
       {
         id: area.id,
-        name: area.name
+        name: area.name,
+        picture: area.picture
       }
     end
 
