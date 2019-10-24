@@ -57,7 +57,7 @@ namespace :data do
                  chapter: qa, picture_url: 'https://imagizer.imageshack.com/img924/3813/tUdKiv.png',
                  slack_id: 'DHJ9VU4KX', slack_name: 'Edith')
     User.create!(first_name: 'Gonzalo', last_name: 'Barrios', email: 'gbarrios@theappraisallane.com',
-                 position: 0, current_squad: core,
+                 position: 3, current_squad: core,
                  chapter: qa, picture_url: 'https://imagizer.imageshack.com/img923/7250/zr8b74.png',
                  slack_id: 'DGN3P0CM7', slack_name: 'Gonzalo')
     User.create!(first_name: 'Denis', last_name: 'Trubenkov', email: 'dtrubenkov@theappraisallane.com',
@@ -123,7 +123,7 @@ namespace :data do
                  position: 3, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img921/4633/4IOAAG.png',
                  chapter: backend, slack_id: 'DD3LLEP1C', slack_name: 'gianny', flag_url: argentina)
     User.create!(first_name: 'Rodrigo', last_name: 'Vazquez', email: 'rvazquez@theappraisallane.com',
-                 position: 0, current_squad: core,
+                 position: 0, current_squad: submissions,
                  chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/3120/IMu7c6.png',
                  slack_id: 'DCY15QSG5', slack_name: 'Rod Vaz')
     User.create!(first_name: 'Majo', last_name: 'Andrade', email: 'mandrade@theappraisallane.com',
