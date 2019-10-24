@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191024130352) do
+ActiveRecord::Schema.define(version: 20191024134501) do
+
+  create_table "chapters", force: :cascade do |t|
+    t.string   "name"
+    t.string   "picture_url"
+    t.integer  "chapter_lead_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "squads", force: :cascade do |t|
     t.string   "name"
@@ -21,17 +29,18 @@ ActiveRecord::Schema.define(version: 20191024130352) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",            null: false
-    t.string   "first_name",       null: false
-    t.string   "last_name",        null: false
+    t.string   "email",                        null: false
+    t.string   "first_name",                   null: false
+    t.string   "last_name",                    null: false
     t.string   "location"
     t.integer  "position"
     t.string   "slack_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.integer  "current_squad_id"
     t.string   "picture_url"
     t.string   "slack_handle"
+    t.integer  "chapter_id",       default: 1
   end
 
 end
