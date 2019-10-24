@@ -1,8 +1,7 @@
 namespace :data do
   desc "Create an initial dataset"
   task dataset: :environment do
-    Squad.delete_all
-    User.delete_all
+    [UserSquadHistoryEntry, Squad, User, Feedback].each { |klass| klass.delete_all }
 
     ### Chapters ###
     android = Chapter.create(name: 'Android')
@@ -65,5 +64,17 @@ namespace :data do
     puts 'Finished creating submissions data'
 
     ####
+
+    ############# FEEDBACK #############
+    Feedback.create! text: 'Very good quality of work. The work has a lot of quality. Never seen this kind of quality of work before.',
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 5, category: 0
+    Feedback.create! text: 'Incredible quantity of work. Never seen this amount of work quantity in my whole life.',
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 5, category: 1
+    Feedback.create! text: "Very reliable worker. He's always around, so you can aways rely on him.",
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 4, category: 2
+    Feedback.create! text: 'Very unprofessional employee. Very low work quantity and quality. Not dependable.',
+                     sender_id: mati_t.id, receiver_id: german.id, rating: 1, category: 3
+    puts 'Finished creating feedbacks'
+
   end
 end
