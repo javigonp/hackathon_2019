@@ -6,10 +6,9 @@ class User < ApplicationRecord
   has_many :feedbacks_given, class_name: Feedback, foreign_key: :sender_id
   has_many :feedbacks_received, class_name: Feedback, foreign_key: :receiver_id
 
-  enum position: ['QA', 'Backend Engineer', 'Android Engineer', 'iOS Engineer', 'FE Engineer', 'Product Owner']
+  enum position: ['QA', 'Backend Engineer', 'Android Engineer', 'iOS Engineer', 'FE Engineer', 'Product Owner', 'DevOps', 'VP of Engineer']
 
   def leader
-    puts chapter.chapter_lead
     chapter.chapter_lead
   end
 

@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20191024160743) do
     t.integer  "product_owner_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "picture_url"
   end
 
   create_table "user_squad_history", force: :cascade do |t|
