@@ -1,6 +1,8 @@
 class SquadsController < ApplicationController
-  # def index
-  # end
+  def index
+    squads = Squad.all
+    @serialized_squads = SquadSerializer.index(squads)
+  end
 
   def show
     squad = Squad.find(params[:id])
