@@ -23,6 +23,7 @@ class SquadSerializer
     end
 
     def user(user)
+      return unless user.present?
       UserSerializer.show(user)
     end
 
