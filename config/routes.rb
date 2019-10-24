@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  # get 'squads/index'
-  #
-  # get 'squads/show'
   resources :squads, only: %i[index show], defaults: { format: :json }
   resources :users, only: %i[index show], defaults: { format: :json }
+  resources :chapters, only: %i[index show], defaults: { format: :json }
 
   resources :feedbacks, onlye: %i[create show], defaults: { format: :json } do
     collection do

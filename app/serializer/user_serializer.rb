@@ -8,12 +8,38 @@ class UserSerializer
         created_at: date_transform(user.created_at),
         email: user.email,
         position: user.position,
-        picture_url: user.picture_url
+        picture_url: user.picture_url,
+        leader: leader_info(user.leader),
+        squad: squad(user.current_squad),
+        chapter: chapter(user.chapter)
+
       }
     end
 
     def index(users)
       users.map { |user| show(user) }
+    end
+
+    def leader_info(leader)
+      {
+        id: leader,
+        first_name: leader.first_name,
+        last_name: leader.last_name,
+      }
+    end
+
+    def chapter(chapter)
+      {
+        id: chapter.id,
+        name: chapter.name
+      }
+    end
+
+    def squad(squad)
+      {
+        id: squad.id,
+        name: squad.name
+      }
     end
 
     private

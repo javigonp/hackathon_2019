@@ -8,6 +8,11 @@ class User < ApplicationRecord
 
   enum position: ['QA', 'Backend Engineer', 'Android Engineer', 'iOS Engineer', 'FE Engineer', 'Product Owner']
 
+  def leader
+    puts chapter.chapter_lead
+    chapter.chapter_lead
+  end
+
   def self.team_members(squad_id)
     User.where(current_squad_id: squad_id).where.not(position: 5)
   end
