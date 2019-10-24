@@ -55,6 +55,7 @@ namespace :data do
     retail.update!(product_owner: mike, scrum_master: mauri)
     kaiser = User.create!(first_name: 'Christian', last_name: 'Schmeichel', email: 'cschmeichel@theappraisallane.com',
                         position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img923/3685/6x6hDP.png')
+    submissions.update!(product_owner: mike, scrum_master: mauri)
     backend.update(chapter_lead: kaiser)
     puts 'Finished creating submissions data'
 

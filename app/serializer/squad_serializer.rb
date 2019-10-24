@@ -1,6 +1,7 @@
 class SquadSerializer
   class << self
     def show(squad)
+      puts squad.id
       {
         id: squad.id,
         name: squad.name,
@@ -11,8 +12,8 @@ class SquadSerializer
       }
     end
 
-    def index(seller_appraisals)
-      seller_appraisals.map { |message| show(message) }
+    def index(squads)
+      squads.map { |squad| show(squad) }
     end
 
     private
