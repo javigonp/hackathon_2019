@@ -26,6 +26,7 @@ namespace :data do
     product = Chapter.create(name: 'Product', picture_url: 'https://imagizer.imageshack.com/img922/5974/IrSHUp.jpg')
     qa = Chapter.create(name: 'QA', picture_url: 'https://imagizer.imageshack.com/img924/544/E2XX6k.jpg')
     devops = Chapter.create(name: 'DevOps', picture_url: 'https://imagizer.imageshack.com/img921/7577/5iAjay.jpg')
+    hr = Chapter.create(name: 'HR', picture_url: nil)
     ############
 
 
@@ -58,7 +59,7 @@ namespace :data do
                  slack_id: 'DHJ9VU4KX', slack_name: 'Edith')
     User.create!(first_name: 'Gonzalo', last_name: 'Barrios', email: 'gbarrios@theappraisallane.com',
                  position: 3, current_squad: core,
-                 chapter: qa, picture_url: 'https://imagizer.imageshack.com/img923/7250/zr8b74.png',
+                 chapter: ios, picture_url: 'https://imagizer.imageshack.com/img923/7250/zr8b74.png',
                  slack_id: 'DGN3P0CM7', slack_name: 'Gonzalo')
     User.create!(first_name: 'Denis', last_name: 'Trubenkov', email: 'dtrubenkov@theappraisallane.com',
                  position: 3, current_squad: core, picture_url: 'https://imagizer.imageshack.com/img921/6001/N38GGB.png',
@@ -114,7 +115,7 @@ namespace :data do
                            chapter: qa, picture_url: 'https://imagizer.imageshack.com/img922/9391/kQK6wk.png',
                            slack_id: 'DCNQL51UP', slack_name: 'Diegote')
     User.create!(first_name: 'Marcia', last_name: 'Gilardi', email: 'mgilardi@theappraisallane.com',
-                           position: 2, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img922/1396/X5irXf.png',
+                           position: 2, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img924/3926/55CSZs.png',
                            chapter: android, slack_id: 'DM4GZ6PKQ', slack_name: 'Marcia')
     User.create!(first_name: 'Gustavo', last_name: 'Villa', email: 'gvilla@theappraisallane.com',
                  position: 1, current_squad: submissions, picture_url: 'https://imagizer.imageshack.com/img923/1461/EkEFeR.png',
@@ -154,6 +155,13 @@ namespace :data do
                  current_squad: nil, chapter: product,
                  picture_url: 'https://imagizer.imageshack.com/img922/4223/eSo3BH.png', flag_url: usa)
 
+    User.create!(first_name: 'Sebastian', last_name: 'Arbildi', email: 'sarbildi@theappraisallane.com', position: 0,
+                 current_squad: nil, chapter: product,
+                 picture_url: 'https://imagizer.imageshack.com/img922/786/joLaqo.png', slack_id: 'DKF5Y3MED',
+                 slack_name: 'Sebastian Arbildi')
+
+
+
     ##############
 
     ### Notifications ###
@@ -186,6 +194,30 @@ namespace :data do
 
     dp.update!(scrum_master: pravera)
     puts 'Finished creating DP data'
+
+
+    ### DP ###
+    dp = Squad.create!(name: 'Data Intelligence', product_owner_id: nacho, scrum_master_id: nil, picture_url: 'https://imagizer.imageshack.com/img921/8420/wAPPwi.png')
+    vero = User.create!(first_name: 'Veronica', last_name: 'Bassagoda', email: 'vbassagoda@theappraisallane.com',
+                 position: 8, current_squad: dp, picture_url: 'https://imagizer.imageshack.com/img921/1057/fhV05t.png',
+                 chapter: nil, slack_id: 'DKQLJP7FT', slack_name: 'Vero')
+
+
+    dp.update!(scrum_master: vero)
+    puts 'Finished creating DI data'
+
+    ### HR ###
+    User.create!(first_name: 'Paula', last_name: 'Prato', email: 'pprato@theappraisallane.com',
+                 position: 9, current_squad: nil, picture_url: 'https://imagizer.imageshack.com/img924/6456/JodHmA.png',
+                 chapter: hr, slack_id: 'DCNSWV9GX', slack_name: 'Poli')
+    User.create!(first_name: 'Milagros', last_name: 'Rodriguez', email: 'mrodriguez@theappraisallane.com',
+                 position: 9, current_squad: nil, picture_url: 'https://imagizer.imageshack.com/img924/207/OmykGx.png',
+                 chapter: hr, slack_id: 'DHS6CJHDW', slack_name: 'Mili')
+    User.create!(first_name: 'Carolina', last_name: 'Winarz', email: 'cwinarz@theappraisallane.com',
+                 position: 9, current_squad: nil, picture_url: 'https://imagizer.imageshack.com/img921/8482/xTvP2m.png',
+                 chapter: hr, slack_id: 'DP2FL3JTT', slack_name: 'Caro')
+
+    puts 'Finished creating HR data'
 
     ## Leader ##
     [marcher, kaiser, diego_g, kenny, mathi, mati_t].each do |lead|

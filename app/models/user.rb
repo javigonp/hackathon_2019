@@ -9,11 +9,10 @@ class User < ApplicationRecord
   has_many :user_squad_history_entries, class_name: UserSquadHistoryEntry, foreign_key: :user_id
 
   enum position: ['QA', 'Backend Engineer', 'Android Engineer', 'iOS Engineer', 'FE Engineer', 'Product Owner',
-                  'DevOps', 'VP of Engineer']
+                  'DevOps', 'VP of Engineer', 'Data Scientist', 'Human Resources']
 
 
   def lead
-    puts first_name
     return self.leader if self.leader.present?
     chapter.try(:chapter_lead)
   end
